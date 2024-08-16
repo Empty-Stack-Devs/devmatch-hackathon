@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --text: #fff;
+    
+    --primary: #000;
+    --secondary: #323741;
+    --tertiary: #2a2d35;
+
+    --border-color:#424650;
+    --border-width:5px;
+    --border-radius:20px;
+
+    --faded-text-colour:#9997;
+}
+
+html, head, body, h1, h2, h3, h4, h5, h6, input, a, textarea, th, li {
+    font-family: 'Roboto Mono';
+    font-weight: 400;
+
+    margin:0;
+    padding:0;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+small {font-size: 0.750rem; /* 12px */}
+
+html, head, body {
+    background:var(--primary);
+
+    margin:0;
+    padding:0;
+
+    color:var(--text);
+}
+
+/* #region scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 1000px;
+}
+/*#endregion */
