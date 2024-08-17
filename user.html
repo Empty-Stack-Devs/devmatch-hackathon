@@ -11,26 +11,26 @@
         <link rel="stylesheet" href="./styles/user.css">
     </head>
     <body>
+        <script src="./scripts/homepage.js"></script>
+        <script src="./scripts/source.js"></script>
         <div id="parent">
             <div id="user-info">
                 <div id="user-credentials">
                     <h2 id="name">
-                        Shawn Huang Qi Yang
+                        placeholder
                     </h2>
-                    <h3 id="medical-id">
-                        0xec1e6cab4a5283c84ed8aa07067bb4f6b275f021d855dd2116b5f9cce19490f7
-                    </h3>
+                    <h3 id="medical-id">try</h3>
                 </div>
                 <div id="user-details">
                     <div>
-                        <h3>40 yrs old</h3>
-                        <h3>Male</h3>
-                        <h3>Malaysian</h3>
+                        <h3 id="age">4s</h3>
+                        <h3 id="gender">ale</h3>
+                        <h3 id="nationality">Maan</h3>
                     </div>
                     <div>
-                        <h3>O-</h3>
-                        <h3>160cm</h3>
-                        <h3>65kg</h3>
+                        <h3 id="bloodtype">O-</h3>
+                        <h3 id="height">160cm</h3>
+                        <h3 id="weight">65kg</h3>
                     </div>
                 </div>
             </div>
@@ -62,5 +62,55 @@
                 </table>
             </div>
         </div>
+        <script>
+            var table = document.querySelector("table");
+            let medId = localStorage.getItem("medical_id");
+            let name = localStorage.getItem("name")
+            let age = localStorage.getItem("age");
+            let gender = localStorage.getItem("gender");
+            let nationality = localStorage.getItem("nationality");
+            let bloodtype = localStorage.getItem("bloodtype");
+            let height = localStorage.getItem("height");
+            let weight = localStorage.getItem("weight");
+            let date = localStorage.getItem("date_list");
+            date = date.slice(1, -1);
+            date = date.split(',');
+            date = date.map(item => item.trim());
+            let activity = localStorage.getItem("activity_list");
+            activity = activity.slice(1, -1);
+            activity = activity.split(',');
+            activity = activity.map(item => item.trim());
+            let status = localStorage.getItem("status_list");
+            status = status.slice(1, -1);
+            status = status.split(',');
+            status = status.map(item => item.trim());
+            let lenDate = date.length;
+            console.log(date)
+            console.log(lenDate)
+            let result = '';
+
+            if(medId) {
+                document.querySelector("#medical-id").innerHTML = medId;
+                document.querySelector("#name").innerHTML = name;
+                document.querySelector("#age").innerHTML = age;
+                document.querySelector("#gender").innerHTML = gender;
+                document.querySelector("#nationality").innerHTML = nationality;
+                document.querySelector("#bloodtype").innerHTML = bloodtype;
+                document.querySelector("#height").innerHTML = height;
+                document.querySelector("#weight").innerHTML = weight;
+
+                for(let i = 0; i < lenDate; i++){
+                    result += `
+                    <tr data-status="${status[i]}">
+                        <td>${date[i]}</td>
+                        <td>${activity[i]}</td>
+                        <td>${status[i]}</td>
+                    </tr>
+                    `
+                };
+
+                table.innerHTML = result
+            }
+        </script>
     </body>
 </html>

@@ -76,20 +76,20 @@
                     text-align:left;
                 }
 
-                &[data-status="completed"] {
+                &[data-status="Completed"] {
                     td:last-child {
                         font-style:italic;
                         opacity: 0.5;
                     }
                 }
 
-                &[data-status="pending"] {
+                &[data-status="Pending"] {
                     td:last-child {
                         color:yellow;
                     }
                 }
 
-                &[data-status="ongoing"] {
+                &[data-status="Ongoing"] {
                     td:last-child {
                         color:green;
                     }
