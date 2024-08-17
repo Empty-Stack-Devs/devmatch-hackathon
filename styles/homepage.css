@@ -24,12 +24,14 @@
         width: 20rem;
         opacity: 0.6;
         transition: 0.2s ease;
-    }  
 
-    #img #placeholder:hover{
-        opacity: 1.0;
-        transform: scale(1.2)
-    }
+        border-radius:var(--border-radius);
+
+        &:hover {
+            opacity: 1.0;
+            transform: scale(1.2);
+        }
+    }  
 }
 
  
