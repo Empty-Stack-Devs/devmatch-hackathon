@@ -11,7 +11,7 @@ function sendIC() {
             document.querySelector("#wrongID").innerHTML = 'Medical ID does not exist!';
         } else {
             setLocalStorage('medical_id', id);
-            window.location.href = '/user.html';
+            window.location.href = './user.html';
         }
     })
 }
