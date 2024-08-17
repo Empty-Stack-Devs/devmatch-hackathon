@@ -8,48 +8,59 @@
         <meta name="author" content="empty-stack-devs">
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link rel="stylesheet" href="./styles/style.css">
-        <link rel="stylesheet" href="./styles/userpage.css">
+        <link rel="stylesheet" href="./styles/user.css">
     </head>
     <body>
         <div id="parent">
-            <h1>
-                👩‍💼 User Info 👩‍💼
-            </h1>
-            <table id="t1">
-                <tr>
-                    <td>test age</td>
-                    <td>man</td>
-                    <td>Antarctican</td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <td>O-</td>
-                    <td>6foot3</td>
-                    <td>900kg</td>
-                </tr>
-            </table>  
-            <br>
-            <div id="text-1">
-                <h2>Medical Activity Schedule</h2>
+            <div id="user-info">
+                <div id="user-credentials">
+                    <h2 id="name">
+                        Shawn Huang Qi Yang
+                    </h2>
+                    <h3 id="medical-id">
+                        0xec1e6cab4a5283c84ed8aa07067bb4f6b275f021d855dd2116b5f9cce19490f7
+                    </h3>
+                </div>
+                <div id="user-details">
+                    <div>
+                        <h3>40 yrs old</h3>
+                        <h3>Male</h3>
+                        <h3>Malaysian</h3>
+                    </div>
+                    <div>
+                        <h3>O-</h3>
+                        <h3>160cm</h3>
+                        <h3>65kg</h3>
+                    </div>
+                </div>
             </div>
-            <table id="medical">
-                <tr>
-                    <th>Date</th>
-                    <th>Activity</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>17/08/2024</td>
-                    <td>Cancer Treatment</td>
-                    <td>Ongoing</td>
-                </tr>
-                <tr>
-                    <td>18/08/2024</td>
-                    <td>Diabetes Treatment</td>
-                    <td>Ongoing</td>
-                </tr>
-            </table>
+            <div id="records">
+                <div id="header">
+                    <h3>Medical Activity Schedule</h3>
+                </div>
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Activity</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr data-status="pending">
+                        <td>19/08/2024</td>
+                        <td>Cancer Treatment</td>
+                        <td>Pending</td>
+                    </tr>
+                    <tr data-status="ongoing">
+                        <td>18/08/2024</td>
+                        <td>Dialysis</td>
+                        <td>Ongoing</td>
+                    </tr>
+                    <tr data-status="completed">
+                        <td>18/08/2024</td>
+                        <td>Diabetes Treatment</td>
+                        <td>Completed</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </body>
 </html>

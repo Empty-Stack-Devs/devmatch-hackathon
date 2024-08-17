@@ -1,0 +1,100 @@
+
+#parent {
+    display:flex;
+    justify-content: start;
+    align-items:start;
+    flex-direction: column;
+
+    width: 100%;
+
+    #user-info {
+        margin:3em 5ch;
+
+        #user-credentials {
+            margin-bottom:2.5ch;
+
+            #medical-id {
+                font-style:italic;
+                opacity: 0.5;
+                font-size:1rem;
+            }
+        }
+    
+        #user-details {
+            display:flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+    
+            width:100%;
+    
+            div {
+                display:flex;
+                justify-content: start;
+                align-items: center;
+                flex-direction: row;
+    
+                width:100%;
+    
+                h3 {
+                    /* margin-right:5ch; */
+                    width:15ch;
+
+                    font-size:2rem;
+                }
+            }
+        }
+    }
+
+    #records {
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        #header {
+            margin:3em;
+        }
+
+        table {
+            width:80%;
+
+            tr {
+                margin-bottom:1em;
+
+                td, th {
+                    font-size:1.5em;
+                }
+
+                td:first-child, th:first-child {
+                    text-align:right;
+                    padding-right:2ch;
+                }
+
+                td:last-child, th:last-child {
+                    text-align:left;
+                }
+
+                &[data-status="completed"] {
+                    td:last-child {
+                        font-style:italic;
+                        opacity: 0.5;
+                    }
+                }
+
+                &[data-status="pending"] {
+                    td:last-child {
+                        color:yellow;
+                    }
+                }
+
+                &[data-status="ongoing"] {
+                    td:last-child {
+                        color:green;
+                    }
+                }
+            }
+        }
+    }
+}
