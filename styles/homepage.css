@@ -18,20 +18,21 @@
     h2 {
         font-size: 1rem;
         margin-top: 0.6rem;
-        margin-bottom: 3.0rem;
+        margin-bottom: 1rem;
     } 
 
     #form1 {
+        margin-top: 1.0rem;
         tr{
             input{
-                width: 18em;
+                width: 20em;
                 height: 2em;
                 text-align: center;
                 border-radius: 6px;
-                transition: 0.4s ease;
+                transition: 0.8s ease;
 
                 &:hover{
-                    width: 19em;
+                    width: 40em;
                 }
             }
         }
@@ -54,6 +55,11 @@
             transform: scale(1.2);
 
         }
+    }
+
+    #wrongID{
+        color: red;
+        font-size: 1.4rem;
     }
 }
 
