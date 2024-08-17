@@ -1,3 +1,4 @@
+
 #parent {
     display:flex;
     flex-direction: column;
@@ -10,7 +11,6 @@
     height:100vh;
 
     h1 {
-        font-size: 2rem;
         margin: 0.6rem;
     }
 
@@ -20,18 +20,20 @@
         margin-bottom: 3.0rem;
     } 
 
-    #img #placeholder{
-        width: 20rem;
-        opacity: 0.6;
-        transition: 0.2s ease;
-
-        border-radius:var(--border-radius);
-
-        &:hover {
-            opacity: 1.0;
-            transform: scale(1.2);
+    #form1 {
+        tr{
+            input{
+                width: 18em;
+                height: 2em;
+                text-align: center;
+                border-radius: 6px;
+            }
         }
-    }  
+
+        td{
+            text-align:right;
+        }
+    }
 }
 
  
