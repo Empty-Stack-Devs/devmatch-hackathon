@@ -12,6 +12,7 @@
 
     h1 {
         margin: 0.6rem;
+        text-shadow: 0 0 0.6rem white;
     }
 
     h2 {
@@ -27,11 +28,31 @@
                 height: 2em;
                 text-align: center;
                 border-radius: 6px;
+                transition: 0.4s ease;
+
+                &:hover{
+                    width: 19em;
+                }
             }
         }
 
         td{
             text-align:right;
+        }
+    }
+
+    button{
+        border-radius: 5px;
+        width: 5em;
+        height: 2.2em;
+        background-color: #ada2dc;
+        box-sizing: border-box;
+        box-shadow: 0 0 0.6rem white;
+        transition: 0.4s ease;
+
+        &:hover{
+            transform: scale(1.2);
+
         }
     }
 }
