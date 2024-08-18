@@ -44,20 +44,17 @@
                         <th>Activity</th>
                         <th>Status</th>
                     </tr>
-                    <tr data-status="pending">
+                    <tr>
                         <td>19/08/2024</td>
                         <td>Cancer Treatment</td>
-                        <td>Pending</td>
                     </tr>
-                    <tr data-status="ongoing">
+                    <tr>
                         <td>18/08/2024</td>
                         <td>Dialysis</td>
-                        <td>Ongoing</td>
                     </tr>
-                    <tr data-status="completed">
+                    <tr>
                         <td>18/08/2024</td>
                         <td>Diabetes Treatment</td>
-                        <td>Completed</td>
                     </tr>
                 </table>
             </div>
@@ -80,10 +77,6 @@
             activity = activity.slice(1, -1);
             activity = activity.split(',');
             activity = activity.map(item => item.trim());
-            let status = localStorage.getItem("status_list");
-            status = status.slice(1, -1);
-            status = status.split(',');
-            status = status.map(item => item.trim());
             let lenDate = date.length;
             console.log(date)
             console.log(lenDate)
@@ -101,10 +94,9 @@
 
                 for(let i = 0; i < lenDate; i++){
                     result += `
-                    <tr data-status="${status[i]}">
+                    <tr>
                         <td>${date[i]}</td>
                         <td>${activity[i]}</td>
-                        <td>${status[i]}</td>
                     </tr>
                     `
                 };

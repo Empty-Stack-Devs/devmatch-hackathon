@@ -69,6 +69,24 @@
         color: red;
         font-size: 1.4rem;
     }
+
+    #doc-page{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        letter-spacing: normal;
+    }
+
+    #doc-page a{
+        padding-left: 1em;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.6);
+        transition: 0.2s ease
+    }
+
+    #doc-page a:hover{
+        transform: scaleX(1.1);
+    }
 }
 
  

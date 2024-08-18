@@ -47,8 +47,8 @@
     }
 
     #records {
+        display: flex;
         width:100%;
-        display:flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -59,7 +59,7 @@
 
         table {
             width:80%;
-
+            align-items: center;
             tr {
                 margin-bottom:1em;
 
@@ -69,14 +69,15 @@
 
                 td:first-child, th:first-child {
                     text-align:right;
-                    padding-right:2ch;
+                    padding-right:1ch;
+                    padding-left: 5rem;
                 }
 
                 td:last-child, th:last-child {
                     text-align:left;
                 }
 
-                &[data-status="Completed"] {
+                /* &[data-status="Completed"] {
                     td:last-child {
                         font-style:italic;
                         opacity: 0.5;
@@ -93,7 +94,7 @@
                     td:last-child {
                         color:green;
                     }
-                }
+                } */
             }
         }
     }

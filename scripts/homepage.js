@@ -22,8 +22,19 @@ function sendIC() {
             localStorage.setItem('weight', md['weight'])
             localStorage.setItem('date_list', md['date'])
             localStorage.setItem('activity_list', md['activity'])
-            localStorage.setItem('status_list', md['status'])
-            window.location.href = './user.html';
+            localStorage.setItem('userType', md['user'])
+
+            if (md['user'] == "normal") { 
+                window.location.href = './user.html';
+            } else if (md['user'] == "doctor") {
+                document.querySelector("#doc-page").innerHTML = `
+                    <p>Click here to access the doctor page: </p>
+                    <a href="doctor.html">Doctor Page</a>
+                    `
+            };
         }
     })
 }
+
+// normal user hash: 0x5ea86875dfc5a3f25a948d5061ca99a2bb2dd5e533b20f7f2744bf487bba783f
+// doc has: 0x8b48defc20dc8ffe066ea1fdc46ad4612f98981fcd10173824eb54ebd9f38485
