@@ -19,7 +19,7 @@
         margin-top: 0.6rem;
         margin-bottom: 1rem;
         color: #ffffff;
-        text: bold;
+        font-weight: bold;
     } 
 
     #form1 {
@@ -46,8 +46,8 @@
         tr {
             input {
                 width: 100%;
+                text-align: left;
                 height: 2em;
-                text-align: center;
                 border: 1px solid #ccc;
                 border-radius: 6px;
                 transition: width 0.8s ease, border-color 0.4s ease;
@@ -116,7 +116,7 @@
 }
 
 
- 
+
 
 
  
