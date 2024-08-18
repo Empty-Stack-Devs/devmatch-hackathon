@@ -11,6 +11,100 @@
         <link rel="stylesheet" href="./styles/homepage.css">
     </head>
     <body>
-        <h1>dadda</h1>
+        <div id="parent">
+            <h1>
+                🏥 BlockHealth 🏥
+            </h1>
+            <h2>
+                Please Input Details of Patient Here!
+            </h2>
+            <h4 id="wrongID">
+                
+            </h4>
+            <table id="form1">
+                <tr>
+                    <td>
+                        <label for "name">Date/s of Appointment: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="weight" name="weight" placeholder="eg. [02/01/2024, 09/01/2024]">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for "name">Reason of Appointment: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="reason" name="reason" placeholder="eg. Health Check-up">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for "name">Name of Patient: </label>
+                    </td>   
+                    <td>
+                        <input type="text" id="nama" name="nama" placeholder="eg. Ben Dover">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for "name">Age of Patient: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="age" name="age" placeholder="eg. 56">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for "name">Sex of Patient: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="sex" name="sex" placeholder="eg. Male">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for "name">Nationality of Patient: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="nationality" name="nationality" placeholder="eg. Malaysian">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for "name">Blood Type of Patient: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="blood" name="nama" placeholder="eg. B-">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for "name">Height of Patient: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="height" name="height" placeholder="eg. 181cm">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for "name">Weight of Patient: </label>
+                    </td>
+                    <td>
+                        <input type="text" id="weight" name="weight" placeholder="eg. 64kg">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            
+            <div id="btn">
+                <button type="submit" onclick="inputData()">Submit</button>
+                <div id="hash-result">
+                </div>
+            </div>
+        </div>
+        
+        <script src="./scripts/homepage.js"></script>
+        <script src="./scripts/source.js"></script>
     </body>
 </html>
