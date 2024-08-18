@@ -7,33 +7,34 @@ function inputData() {
     let heightU = document.querySelector("#height").value;
     let weightU = document.querySelector("#weight").value;
     let dateU = document.querySelector("#date").value;
-    let activityU = document.querySelector("#activity").value;
+    let activityU = document.querySelector("#reason").value;
     let userType = document.querySelector("#user").value;
 
     const RAW_DATA = `
-        "wallet_address":"${WALLET_ADDRESS}",
-        "contract_address":"${CONTRACT_ADDRESS}",
-        "metadata":{
-            "name": "${nameU}",
-            "age": "${ageU}",
-            "gender": "${genderU}",
-            "nationality": "${nationalityU}",
-            "bloodtype": "${bloodtypeU}",
-            "height": "${heightU}",
-            "weight": "${weightU}",
-            "date": "${dateU}",
-            "activity": "${activityU}",
-            "user": "${userType}"
-        },
-        "file": null,
-        "callback_url": "https://postman-echo.com/post?"
-    `;
+{
+    "wallet_address":"${WALLET_ADDRESS}",
+    "contract_address":"${CONTRACT_ADDRESS}",
+    "metadata":{
+    "name": "${nameU}",
+    "age": "${ageU}",
+    "gender": "${genderU}",
+    "nationality": "${nationalityU}",
+    "bloodtype": "${bloodtypeU}",
+    "height": "${heightU}",
+    "weight": "${weightU}",
+    "date": "${dateU}",
+    "activity": "${activityU}",
+    "user": "${userType}"
+    },
+    "file": null,
+    "callback_url": "https://postman-echo.com/post?"
+}`;
 
-    sendGetRequest(`${BACKEND_ADDRESS}/audit/audit/`, RAW_DATA , (r) => {
+    sendPostRequest(`${BACKEND_ADDRESS}/audit/audit/`, RAW_DATA , (r) => {
         console.log(r);
         
         let hash = JSON.parse(r).result.transactionHash;
-        document.querySelector("#doc-page").innerHTML = `
+        document.querySelector("#hash-result").innerHTML = `
             <p>${hash}</p>
             `
     });

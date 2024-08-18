@@ -8,6 +8,9 @@ function sendIC() {
         let md = JSON.parse(r).result.metadata
         md = JSON.parse(md)
         console.log(response.result == null);
+        console.log(md)
+        console.log(md['user'])
+        console.log(md['date'])
 
         if (response.result == null) {
             document.querySelector("#wrongID").innerHTML = 'Medical ID does not exist!';
@@ -26,10 +29,10 @@ function sendIC() {
 
             if (md['user'] == "normal") { 
                 window.location.href = './user.html';
-            } else if (md['user'] == "doctor") {
+            } else if (md['user'] == "staff") {
                 document.querySelector("#doc-page").innerHTML = `
-                    <p>Click here to access the doctor page: </p>
-                    <a href="doctor.html">Doctor Page</a>
+                    <p>Click here to access the staff page: </p>
+                    <a href="staff.html">Staff Page</a>
                     `
             };
         }

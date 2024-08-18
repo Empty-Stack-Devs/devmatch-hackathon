@@ -59,7 +59,6 @@
 
         table {
             width:80%;
-            align-items: center;
             tr {
                 margin-bottom:1em;
 
@@ -70,7 +69,6 @@
                 td:first-child, th:first-child {
                     text-align:right;
                     padding-right:1ch;
-                    padding-left: 5rem;
                 }
 
                 td:last-child, th:last-child {
