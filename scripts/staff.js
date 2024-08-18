@@ -40,4 +40,8 @@ function inputData() {
     });
 }
 
+function toHome(){
+    window.location.href = './index.html';
+}
+
 // [02/02/2222, 0/0/0002]
